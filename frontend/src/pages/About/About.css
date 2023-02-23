@@ -1,0 +1,16 @@
+.collapse__container{
+margin: 10px 0 100px 0;
+}
+.about__main{
+padding: 0% 5%;
+}
+.about__collapse{
+    margin: 0 10%;
+    padding: 10px 0;
+}
+@media only screen and (max-width: 480px) {
+    .about__collapse{
+        margin: 0;
+    }
+    
+  }

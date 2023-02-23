@@ -1,0 +1,28 @@
+header{
+
+align-items: center;
+display: flex;
+justify-content: space-between;
+padding: 1.5% 5%;
+}
+.nav{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+}
+.nav__link{
+    text-decoration: none;
+    color: #ff6060;
+}
+
+@media only screen and (max-width: 480px) {
+    Header img{
+        width: 140px;
+    }
+    .nav{
+        gap: 20px;
+    }
+    .nav__link{
+        font-size: 15px;
+    }
+  }

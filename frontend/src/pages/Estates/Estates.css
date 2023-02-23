@@ -1,0 +1,51 @@
+.estate__main {
+    color: #ff6060;
+   }
+   .estate__content {
+      margin: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .estate__title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .estate__location {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .estate__tags {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .estate__collapse {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+      }
+      .collapse__overlay{
+        width: 46%;
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .estate__content {
+          flex-direction: column;
+          padding: 20px 0;
+          margin: 0;
+        }
+        .hostRating__overlay{
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
+        .collapse__overlay{
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .estate__collapse {
+          flex-direction: column;
+          margin-bottom: 50px;
+        }
+      }
+     

@@ -1,0 +1,42 @@
+.Error {
+    background-color: white;
+    color: #ff6060;
+  }
+  .Error__code {
+    width: 100%;
+    font-size: 150px;
+    font-weight: 700;
+    text-align: center;
+    margin: 1.5rem auto;
+  }
+  .Error__message {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .Error__link {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 5rem auto;
+  }
+  .Error__link a {
+    color: #ff6060;
+  }
+
+
+  @media only screen and (max-width: 480px) {
+    .Error__code {
+      font-size: 100px;
+    }
+    .Error__message {
+      font-size: 20px;
+  }
+  .Error__link a {
+    font-size: 15px;
+}
+  }
+ 
