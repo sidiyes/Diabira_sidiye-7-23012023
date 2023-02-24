@@ -12,7 +12,7 @@ const Collapse = ({ title, content }) => {
     <div className="collapse">
       <div className="collapse__title" onClick={() => toggle()}>
         {title}
-        <p className="collapse__icon">{isOpen ? <i>iii</i> : <i>ooo</i>}</p>
+        <p className="collapse__icon">{isOpen ? <i>i</i> : <i>o</i>}</p>
       </div>
       {isOpen && <p className="collapse__content">{content}</p>}
     </div>

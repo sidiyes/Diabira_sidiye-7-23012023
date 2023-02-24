@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Slider.css";
-//Style
+
 import arrowLeft from "../../images/arrowLeft.png";
 import arrowRight from "../../images/arrowRight.png";
 
@@ -25,8 +25,8 @@ const Slider = ({ slides }) => {
             key={index}
             className={
               index === current
-                ? "slide slider__active-picture"
-                : "slide slider__inactive-picture"
+                ? "slide slider__active"
+                : "slide slider__inactive"
             }
           >
             {index === current && (
@@ -35,7 +35,7 @@ const Slider = ({ slides }) => {
           </div>
         );
       })}
-      {/* get button if there are more thant one picture */}
+
       {length > 1 ? (
         <>
           <div className="slider__previous" onClick={prevSlide}>

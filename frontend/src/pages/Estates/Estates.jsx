@@ -13,6 +13,10 @@ const Estate = () => {
     (estateOption) => estateOption.id === estateId
   );
 
+  /* if (estateOption.id !== estateId) {
+    return alert("yesss");
+  } */
+
   const { pictures, title, location, host, description, rating, equipments } =
     estateOption;
 
@@ -24,8 +28,8 @@ const Estate = () => {
           <h1 className="estate__title">{title}</h1>
           <p className="estate__location">{location}</p>
           <div className="estate__tags">
-            {estateOption.tags.map((tags, index) => (
-              <Tags key={index} tagPlaceholder={tags} />
+            {estateOption.tags.map((tag, index) => (
+              <Tags key={index} tagPlaceholder={tag} />
             ))}
           </div>
         </div>

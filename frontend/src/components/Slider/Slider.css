@@ -1,7 +1,7 @@
 .slider {
     position: relative; }
   
-    .slider__active-picture {
+    .slider__active {
       height: 380px;
       width: 100%;
     }
@@ -44,7 +44,7 @@
   
 
     @media only screen and (max-width: 480px) {
-      .slider__active-picture {
+      .slider__active {
         height: 240px;
       }
       .slider__next-icon{
