@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../../api/data";
 import "./Estates.css";
 import Rating from "../../components/Rating/Rating";
@@ -13,13 +13,14 @@ const Estate = () => {
     (estateOption) => estateOption.id === estateId
   );
 
-  /* if (estateOption.id !== estateId) {
-    return alert("yesss");
-  } */
+  if (!estateOption) {
+    return <Navigate to="/404" />;
+  }
 
   const { pictures, title, location, host, description, rating, equipments } =
     estateOption;
 
+  console.log(equipments);
   return (
     <main className="estate__main">
       <Slider slides={pictures} />
@@ -40,10 +41,16 @@ const Estate = () => {
       </div>
       <div className="estate__collapse">
         <div className="collapse__overlay">
-          <Collapse title="Description" content={description} />
+          <Collapse title="Description">{description}</Collapse>
         </div>
         <div className="collapse__overlay">
-          <Collapse title="Équipements" content={equipments} />
+          <Collapse title="Équipements">
+            <ul className="equipments__item">
+              {equipments.map((equipment) => {
+                return <li key={equipment}>{equipment}</li>;
+              })}
+            </ul>
+          </Collapse>
         </div>
       </div>
     </main>

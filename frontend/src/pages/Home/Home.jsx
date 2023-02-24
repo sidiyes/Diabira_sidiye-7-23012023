@@ -18,6 +18,7 @@ const Home = () => {
         {apartments.map((apartment) => {
           return (
             <Thumb
+              key={apartment.id}
               image={apartment.cover}
               title={apartment.title}
               id={apartment.id}

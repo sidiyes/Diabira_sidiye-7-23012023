@@ -36,7 +36,7 @@ const About = () => {
       <div className="collapse__container">
         {collapseText.map(({ title, content }) => (
           <div className="about__collapse">
-            <Collapse title={title} content={content} />
+            <Collapse title={title}>{content}</Collapse>
           </div>
         ))}
       </div>

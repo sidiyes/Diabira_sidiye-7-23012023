@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Collapse.css";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggle = () => {
@@ -12,9 +12,15 @@ const Collapse = ({ title, content }) => {
     <div className="collapse">
       <div className="collapse__title" onClick={() => toggle()}>
         {title}
-        <p className="collapse__icon">{isOpen ? <i>i</i> : <i>o</i>}</p>
+        <p className="collapse__icon">
+          {!isOpen ? (
+            <i className="fa-solid fa-chevron-down"></i>
+          ) : (
+            <i className="fa-solid fa-chevron-up"></i>
+          )}
+        </p>
       </div>
-      {isOpen && <p className="collapse__content">{content}</p>}
+      {isOpen && <div className="collapse__content">{children}</div>}
     </div>
   );
 };
